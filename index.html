@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>WatchMe</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+  <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+  <link rel="stylesheet" href="css/loginstyle.css">
+  
+  <script>
+    var userAgent = navigator.userAgent + '';
+    if (userAgent.indexOf('iPhone') > -1) {
+      document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+      var mobile_system = 'iphone';
+    } else if (userAgent.indexOf('Android') > -1) {
+      document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+      var mobile_system = 'android';
+    } else {
+      var mobile_system = '';
+    }
+  </script>
+  
+  <script src="js/lib/jquery.js"></script>
+  <!-- your scripts here -->
+  <script src="js/app/app.js"></script>
+  <script src="js/app/bootstrap.js"></script>
+  <script src="js/lib/jquery.mobile.js"></script>
+
+  </head>
+  <body style="height: 100%">    
+    <div data-role="page" style="height: 100%">
+      <div data-role="content"  style="text-align: center;">  
+              <div class="container">  
+                <form id="contact" action="" method="post">
+                  <center><h2>Register</h2></center>
+                  <fieldset>
+                    <input placeholder="First name" type="text" name="fname" id="fnm" tabindex="1" required>
+                      <span style="color:red" class="error" id="ferror">
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Last name" type="text" name="lname" id="lnm" tabindex="2" required>
+                      <span style="color:red" class="error" id="lerror">
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Username" type="text" name="uname" id="unm" tabindex="3" required>
+                      <span style="color:red" class="error" id="uerror">
+                  </fieldset>     
+                  <fieldset>
+                    <input placeholder="Email" type="email" name="email" id="eml" tabindex="4" required>
+                      <span style="color:red" class="error" id="emerror">
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Age" type="text" name="age" id="age" tabindex="3"  required>
+                      <span style="color:red" class="error" id="uerror">
+                  </fieldset> 
+                  <fieldset>
+                    <input placeholder="Phonenumber" type="text" name="pnumber" id="pnm" tabindex="3" required>
+                      <span style="color:red" class="error" id="uerror">
+                  </fieldset> 
+                  <fieldset>
+                    <button name="register" type="submit" id="registerSubmit" onclick="validateregistration()" data-submit="...Sending">Submit</button>
+                  </fieldset>
+                  <a href="login/index.html" style="text-align:center">Back to Login</a>
+                </form>
+              </div> 
+           </div>         
+
+      <div data-role="footer">
+        <h4>WatchMe</h4>
+      </div><!-- /footer -->
+    </div><!-- /page -->
+     <script type="text/javascript" src="../js/myscript.js"></script> 
+  </body>
+</html>
